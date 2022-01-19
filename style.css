@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  box-sizing: border-box;
+}
+
+
+.container {
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.content-wrapper {
+  width: 62.5VW;
+  background: #C0DBD9;
+}
+
+.header {
+  padding: 30px;
+  background: #7FAFF7;
+}
+
+.header__checkbox {
+  position: absolute;
+  display: none;
+}
+
+.header__btn {
+  display: block;
+  padding: 8px 15px;
+  max-width: 206px;
+  background: #A5C7F9;
+  border-radius: 5px;
+  color: #ffffff;
+  user-select: none;
+  cursor: pointer;
+  font-size: 20px;
+  transition: all .3s ease-in;
+}
+
+.header__btn:hover {
+  transform: scale(1.1);
+  background: #789df8;
+  box-shadow: 10px 10px 10px #336bfc;
+}
+
+.main {
+  position: relative;
+  margin-top: 15px;
+}
+
+.main__mosaic {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 15px;
+  background: #B3F95A;
+}
+
+.main__mosaic-item {
+  display: flex;
+  height: 198px;
+  background: #8AD191;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 53px;
+}
+
+.item-1 {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.item-2 {
+  grid-column-start: 3;
+  grid-column-end: 6;
+}
+
+.item-4 {
+  grid-column-start: 1;
+  grid-column-end: 6;
+}
+
+.main__slider {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 15px;
+  background: #88B5BF;
+  padding: 30px;
+}
+
+.main__slider-item {
+  width: 13.28vw;
+  height: 10.36vw;
+  background: #0D89B0;
+}
+
+.footer {
+  margin-top: 100px;
+  height: 100px;
+  background: #7FAFF7;
+}
+
+.popup{
+  display: flex;
+  width: 400px;
+  height: 400px;
+  padding: 15px;
+  position: fixed;
+  z-index: 2;
+  flex-direction: column;
+  top: -500px;
+  left: 40%;
+  background: #ffffff;
+  transition: top .3s ease-in-out;
+}
+
+.popup__close{
+  position: absolute;
+  right: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 43px;
+  height: 39px;
+  color: #ffffff;
+  background: #7FAFF6;
+  font-size: 23px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.popup__text{
+  font-size: 53px;
+  margin: auto;
+}
+
+.header__checkbox:checked ~ .popup{
+  top: 100px;
+}
+
